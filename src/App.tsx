@@ -1,25 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
+import CssImport from "./1-css-import/CssImportStyling";
+import CssStyleImporting from "./2-css-style-importing/CssStyleImporting";
+import StyledComponents from "./3-styled-components/StyledComponents";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className="menu">
+          <nav>
+            <ol>
+              <li>
+                <Link to="/css-import">CSS Import</Link>
+              </li>
+              <li>
+                <Link to="/css-style-importing">CSS Style Importing</Link>
+              </li>
+              <li>
+                <Link to="/styled-components">Styled Components</Link>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div className="content">
+          <Switch>
+            <Route path="/css-import">
+              <CssImport />
+            </Route>
+            <Route path="/css-style-importing">
+              <CssStyleImporting />
+            </Route>
+            <Route path="/styled-components">
+              <StyledComponents />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
