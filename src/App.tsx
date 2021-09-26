@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
-import CssImport from "./1-css-import/CssImportStyling";
-import CssStyleImporting from "./2-css-style-importing/CssStyleImporting";
-import StyledComponents from "./3-styled-components/StyledComponents";
+import { Summary } from "./components/Summary";
+import CssImport from "./ways/1-css-import/CssImportStyling";
+import CssStyleImporting from "./ways/2-css-style-importing/CssStyleImporting";
+import StyledComponents from "./ways/3-styled-components/StyledComponents";
 
 function App() {
   return (
@@ -34,6 +28,9 @@ function App() {
 
         <div className="content">
           <Switch>
+            <Route path="/" exact={true}>
+              <Summary />
+            </Route>
             <Route path="/css-import">
               <CssImport />
             </Route>
