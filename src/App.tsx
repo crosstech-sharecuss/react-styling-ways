@@ -2,9 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Summary } from "./components/Summary";
-import CssImport from "./ways/1-css-import/CssImportStyling";
-import CssStyleImporting from "./ways/2-css-style-importing/CssStyleImporting";
-import StyledComponents from "./ways/3-styled-components/StyledComponents";
+import { InlineCssStyling } from "./ways/1-inline-css/InlineCssStyling";
+import { CssImportStyling } from "./ways/2-css-import/CssImportStyling";
+import { CssStyleImporting } from "./ways/3-css-style-importing/CssStyleImporting";
+import { StyledComponents } from "./ways/4-styled-components/StyledComponents";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <div className="menu">
           <nav>
             <ol>
+              <li>
+                <Link to="/inline-css">Inline CSS</Link>
+              </li>
               <li>
                 <Link to="/css-import">CSS Import</Link>
               </li>
@@ -31,8 +35,11 @@ function App() {
             <Route path="/" exact={true}>
               <Summary />
             </Route>
+            <Route path="/inline-css">
+              <InlineCssStyling />
+            </Route>
             <Route path="/css-import">
-              <CssImport />
+              <CssImportStyling />
             </Route>
             <Route path="/css-style-importing">
               <CssStyleImporting />

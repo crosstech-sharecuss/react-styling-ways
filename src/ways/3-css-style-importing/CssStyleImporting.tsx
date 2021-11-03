@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
+
+// Import CSS file as styles object
 import styles from "./CssStyleImporting.module.css";
 
-function CssStyleImporting() {
+// Use CSS as styles object
+export const CssStyleImporting: React.FC<any> = () => {
   return (
     <div className={styles.example}>
       <h3>Hello World</h3>
     </div>
   );
-}
-
-export default CssStyleImporting;
+};

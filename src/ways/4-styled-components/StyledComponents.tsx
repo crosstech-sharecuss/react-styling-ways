@@ -1,12 +1,13 @@
 import React from "react";
+
+// Import Styled Component
 import { StyledComponentsStyle } from "./StyledComponents.style";
 
-function StyledComponents() {
+// Use as a component
+export const StyledComponents: React.FC<any> = () => {
   return (
-    <StyledComponentsStyle color="blue">
+    <StyledComponentsStyle color="white">
       <h3>Hello World</h3>
     </StyledComponentsStyle>
   );
-}
-
-export default StyledComponents;
+};
