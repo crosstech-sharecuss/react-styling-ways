@@ -11,3 +11,15 @@ export const CssImportStyling: React.FC<any> = () => {
     </div>
   );
 };
+
+export const CssImportStylingReadme = () => {
+  return (
+    <div>
+      <ul>
+        <li>
+          Import a css file and use CSS Classes as React className attribute
+        </li>
+      </ul>
+    </div>
+  );
+};

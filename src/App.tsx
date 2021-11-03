@@ -2,10 +2,22 @@ import React from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Summary } from "./components/Summary";
-import { InlineCssStyling } from "./ways/1-inline-css/InlineCssStyling";
-import { CssImportStyling } from "./ways/2-css-import/CssImportStyling";
-import { CssStyleImporting } from "./ways/3-css-style-importing/CssStyleImporting";
-import { StyledComponents } from "./ways/4-styled-components/StyledComponents";
+import {
+  InlineCssStyling,
+  InlineCssStylingReadme,
+} from "./ways/1-inline-css/InlineCssStyling";
+import {
+  CssImportStyling,
+  CssImportStylingReadme,
+} from "./ways/2-css-import/CssImportStyling";
+import {
+  CssModuleStyling,
+  CssModuleStylingReadme,
+} from "./ways/3-css-module/CssModule";
+import {
+  StyledComponents,
+  StyledComponentsReadme,
+} from "./ways/4-styled-components/StyledComponents";
 
 function App() {
   return (
@@ -21,7 +33,7 @@ function App() {
                 <Link to="/css-import">CSS Import</Link>
               </li>
               <li>
-                <Link to="/css-style-importing">CSS Style Importing</Link>
+                <Link to="/css-module">CSS Module</Link>
               </li>
               <li>
                 <Link to="/styled-components">Styled Components</Link>
@@ -36,16 +48,29 @@ function App() {
               <Summary />
             </Route>
             <Route path="/inline-css">
-              <InlineCssStyling />
+              <React.Fragment>
+                <InlineCssStyling />
+                <InlineCssStylingReadme />
+              </React.Fragment>
             </Route>
             <Route path="/css-import">
-              <CssImportStyling />
+              <React.Fragment>
+                <CssImportStyling />
+                <CssImportStylingReadme />
+              </React.Fragment>
             </Route>
-            <Route path="/css-style-importing">
-              <CssStyleImporting />
+            <Route path="/css-module">
+              <React.Fragment>
+                <CssModuleStyling />
+                <CssModuleStylingReadme />
+              </React.Fragment>
             </Route>
             <Route path="/styled-components">
-              <StyledComponents />
+              <React.Fragment>
+                {" "}
+                <StyledComponents />
+                <StyledComponentsReadme />
+              </React.Fragment>
             </Route>
           </Switch>
         </div>

@@ -11,3 +11,18 @@ export const StyledComponents: React.FC<any> = () => {
     </StyledComponentsStyle>
   );
 };
+
+export const StyledComponentsReadme = () => {
+  return (
+    <div>
+      <ul>
+        <li>CSS-in-JS Concept</li>
+        <li>Consistent way for large projects</li>
+        <li>
+          Use javascript variables and constants for parameterized styling for
+          example theme etc.
+        </li>
+      </ul>
+    </div>
+  );
+};
