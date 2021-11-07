@@ -17,14 +17,19 @@ import {
 import {
   StyledComponents,
   StyledComponentsReadme,
-} from "./ways/4-styled-components/StyledComponents";
-import { SassStyling, SassStylingReadme } from "./ways/5-sass/Saas";
+} from "./ways/5-styled-components/StyledComponents";
+import { SassStyling, SassStylingReadme } from "./ways/4-sass/Saas";
+import {
+  TailwindCssStyling,
+  TailwindCssStylingReadme,
+} from "./ways/6-tailwind-css/TailwindCss";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <div className="menu">
+          <h3 className="menu-title">Styling Ways</h3>
           <nav>
             <ol>
               <li>
@@ -37,10 +42,13 @@ function App() {
                 <Link to="/css-module">CSS Module</Link>
               </li>
               <li>
+                <Link to="/sass">SASS</Link>
+              </li>
+              <li>
                 <Link to="/styled-components">Styled Components</Link>
               </li>
               <li>
-                <Link to="/sass">SASS</Link>
+                <Link to="/tailwind-css">Tailwind CSS</Link>
               </li>
             </ol>
           </nav>
@@ -69,16 +77,22 @@ function App() {
                 <CssModuleStylingReadme />
               </React.Fragment>
             </Route>
+            <Route path="/sass">
+              <React.Fragment>
+                <SassStyling />
+                <SassStylingReadme />
+              </React.Fragment>
+            </Route>
             <Route path="/styled-components">
               <React.Fragment>
                 <StyledComponents />
                 <StyledComponentsReadme />
               </React.Fragment>
             </Route>
-            <Route path="/sass">
+            <Route path="/tailwind-css">
               <React.Fragment>
-                <SassStyling />
-                <SassStylingReadme />
+                <TailwindCssStyling />
+                <TailwindCssStylingReadme />
               </React.Fragment>
             </Route>
           </Switch>

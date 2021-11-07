@@ -16,6 +16,7 @@ export const SassStylingReadme = () => {
   return (
     <div>
       <ul>
+        <li>CSS PreProcessors for traditional css styling.</li>
         <li>Use all SASS features in seperate '.scss' file.</li>
       </ul>
     </div>
