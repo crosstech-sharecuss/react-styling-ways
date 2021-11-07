@@ -18,6 +18,7 @@ import {
   StyledComponents,
   StyledComponentsReadme,
 } from "./ways/4-styled-components/StyledComponents";
+import { SassStyling, SassStylingReadme } from "./ways/5-sass/Saas";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
               </li>
               <li>
                 <Link to="/styled-components">Styled Components</Link>
+              </li>
+              <li>
+                <Link to="/sass">SASS</Link>
               </li>
             </ol>
           </nav>
@@ -67,9 +71,14 @@ function App() {
             </Route>
             <Route path="/styled-components">
               <React.Fragment>
-                {" "}
                 <StyledComponents />
                 <StyledComponentsReadme />
+              </React.Fragment>
+            </Route>
+            <Route path="/sass">
+              <React.Fragment>
+                <SassStyling />
+                <SassStylingReadme />
               </React.Fragment>
             </Route>
           </Switch>
