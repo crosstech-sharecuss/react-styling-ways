@@ -18,7 +18,7 @@ import {
   StyledComponents,
   StyledComponentsReadme,
 } from "./ways/5-styled-components/StyledComponents";
-import { SassStyling, SassStylingReadme } from "./ways/4-sass/Saas";
+import { SassStyling, SassStylingReadme } from "./ways/4-sass/Sass";
 import {
   TailwindCssStyling,
   TailwindCssStylingReadme,

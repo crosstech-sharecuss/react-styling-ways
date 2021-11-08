@@ -1,7 +1,7 @@
 import React from "react";
 
 // Import CSS file as styles object
-import "./Style.scss";
+import "./Sass.scss";
 
 // Use CSS as styles object
 export const SassStyling: React.FC<any> = () => {
